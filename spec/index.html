@@ -1,0 +1,81 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mocha Tests</title>
+    <link rel="stylesheet" href="../node_modules/grunt-mocha/node_modules/mocha/mocha.css" />
+  </head>
+  <body>
+    <div id="mocha"></div>
+
+	<!-- @todo: Refactor template implementation -->
+	  <script type="text/html" id="ChannelTemplate">
+	    <div class="channel">
+	      <div class="dial">
+	      	<input type="text" class="osc-selector" 
+	      		value="0" 
+	      		data-min="0" 
+	      		data-max="3" 
+	      		data-width="50"
+	      		data-height="50"
+	      		data-anglearc="300"
+	      		data-angleoffset="-150"
+	      		data-displayinput="false"
+	      		data-cursor="true"
+	      		data-skin="tron"
+	      		data-thickness=".2"
+	      	/>
+	        <div class="dial-icon">&nbsp;</div>
+	      </div>
+
+	      <div class="dial">
+	      	<input type="text" class="frequency" 
+	      		value="220" 
+	      		data-min="220" 
+	      		data-max="440" 
+	      		data-width="50"
+	      		data-height="50"
+	      		data-anglearc="300"
+	      		data-angleoffset="-150"
+	      		data-displayinput="false"
+	      		data-cursor="true"
+	      		data-skin="tron"
+	      		data-thickness=".2"
+	      	/>
+	      </div>
+
+	      <div class="dial">
+	      	<input type="text" class="volume" 
+	      		value="80" 
+	      		data-min="0" 
+	      		data-max="100" 
+	      		data-step="1"
+	      		data-width="50"
+	      		data-height="50"
+	      		data-anglearc="300"
+	      		data-angleoffset="-150"
+	      		data-displayinput="false"
+	      		data-cursor="true"
+	      		data-skin="tron"
+	      		data-thickness=".2"
+	      	/>
+	      </div>
+	    </div>
+	  </script>
+
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+    <script src="../bower_components/underscore/underscore.js"></script>
+    <script src="../dist/js/drone-machine.js"></script>
+    <script src="../node_modules/grunt-mocha/node_modules/mocha/mocha.js"></script>
+    <script src="../node_modules/chai/chai.js"></script>
+    <script>mocha.setup('bdd')</script>
+    <script src="drone-machine-spec.js"></script>
+    <script>
+      mocha.checkLeaks();
+      mocha.globals(['jQuery']);
+      if (navigator.userAgent.indexOf('PhantomJS') < 0) {
+        mocha.run();
+      }
+    </script>
+  </body>
+</html>

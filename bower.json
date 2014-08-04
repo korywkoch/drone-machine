@@ -1,0 +1,33 @@
+{
+  "name": "drone-machine",
+  "version": "0.0.0",
+  "description": "Javascript library that creates a drone machine using the Web Audio API.",
+  "main": "dist/js/drone-machine.min.js",
+  "keywords": [
+    "drone",
+    "machine",
+    "audio",
+    "web",
+    "audio",
+    "api",
+    "oscillators",
+    "synthesizers"
+  ],
+  "authors": [
+    "Kory Koch"
+  ],
+  "license": "MIT",
+  "homepage": "koryko.ch",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "jquery-knob": "~1.2.9",
+    "underscore": "~1.6.0"
+  }
+}

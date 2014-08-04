@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+	<title>Drone Machine</title>
+
+	<!-- General META -->
+	<meta charset="utf-8"/>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8"/>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+
+	<!-- Semantic META -->
+
+	<!-- Facebook META -->
+
+	<!-- Twitter META -->
+
+	<!-- Fav Icon -->
+
+	<!--Application CSS Files-->
+	<link rel="stylesheet" href="dist/css/drone-machine.css" />
+</head>
+
+<body>
+	<section class="content">
+		<section class="container">
+			<div id="DroneMachine">
+			</div>
+		</section>
+	</section>
+	
+  <!-- @todo: Refactor template implementation -->
+  <script type="text/html" id="ChannelTemplate">
+    <div class="channel">
+      <div class="dial">
+      	<input type="text" class="osc-selector" 
+      		value="0" 
+      		data-min="0" 
+      		data-max="3" 
+      		data-width="50"
+      		data-height="50"
+      		data-anglearc="300"
+      		data-angleoffset="-150"
+      		data-displayinput="false"
+      		data-cursor="true"
+      		data-skin="tron"
+      		data-thickness=".2"
+      	/>
+        <div class="dial-icon">&nbsp;</div>
+      </div>
+
+      <div class="dial">
+      	<input type="text" class="frequency" 
+      		value="220" 
+      		data-min="220" 
+      		data-max="440" 
+      		data-width="50"
+      		data-height="50"
+      		data-anglearc="300"
+      		data-angleoffset="-150"
+      		data-displayinput="false"
+      		data-cursor="true"
+      		data-skin="tron"
+      		data-thickness=".2"
+      	/>
+      </div>
+
+      <div class="dial">
+      	<input type="text" class="volume" 
+      		value="80" 
+      		data-min="0" 
+      		data-max="100" 
+      		data-step="1"
+      		data-width="50"
+      		data-height="50"
+      		data-anglearc="300"
+      		data-angleoffset="-150"
+      		data-displayinput="false"
+      		data-cursor="true"
+      		data-skin="tron"
+      		data-thickness=".2"
+      	/>
+      </div>
+    </div>
+  </script>
+	
+	
+
+	<!--Application JavaScript Files-->
+  <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script type="text/javascript" src="bower_components/jquery-knob/js/jquery.knob.js"></script>
+  <script type="text/javascript" src="bower_components/underscore/underscore.js"></script>
+  <script type="text/javascript" src="dist/js/drone-machine.js"></script>
+  <script type="text/javascript">
+    //DroneMachine.create();
+	var drone = new DroneMachine();
+  </script>
+</body>
+
+</html>
