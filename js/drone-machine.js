@@ -1,3 +1,9 @@
+// @TODO: 
+// - Remove npm & bower packages from source control.
+// - Implement template compilation in grunt
+// - Implement channel
+// - Implement master gain nodes, etc. 
+
 (function($, UnderScore, exports){
   exports.DroneMachine = new Class({
     
