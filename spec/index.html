@@ -43,6 +43,23 @@
 	      	/>
 	      </div>
 
+        <div class="dial">
+	      	<input type="text" class="pan" 
+	      		value="0" 
+	      		data-min="0" 
+	      		data-max="3" 
+	      		data-width="50"
+	      		data-height="50"
+	      		data-anglearc="300"
+	      		data-angleoffset="-150"
+	      		data-displayinput="false"
+	      		data-cursor="true"
+	      		data-skin="tron"
+	      		data-thickness=".2"
+	      	/>
+	        <div class="dial-icon">&nbsp;</div>
+	      </div>
+
 	      <div class="dial">
 	      	<input type="text" class="volume" 
 	      		value="80" 
@@ -65,7 +82,7 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
     <script src="../bower_components/underscore/underscore.js"></script>
-    <script src="../dist/js/drone-machine.js"></script>
+    <script src="../lib/js/drone-machine.js"></script>
     <script src="../node_modules/grunt-mocha/node_modules/mocha/mocha.js"></script>
     <script src="../node_modules/chai/chai.js"></script>
     <script>mocha.setup('bdd')</script>

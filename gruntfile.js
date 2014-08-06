@@ -6,8 +6,8 @@ module.exports = function(grunt) {
         separator: ';'
       },
       dist: {
-        src: ['js/lib/class.js', 'js/**/*.js'],
-        dest: 'dist/js/<%= pkg.name %>.js'
+        src: ['src/js/lib/class.js', 'src/js/**/*.js'],
+        dest: 'lib/js/<%= pkg.name %>.js'
       }
     },
     less: {
@@ -19,7 +19,7 @@ module.exports = function(grunt) {
         },
         files: {
           // target.css file: source.less file
-          "dist/css/drone-machine.css": "less/drone-machine.less"
+          "lib/css/drone-machine.css": "src/less/drone-machine.less"
         }
       }
     },
@@ -35,7 +35,7 @@ module.exports = function(grunt) {
     },
     watch: {
       styles: {
-        files: ['less/**/*.less', 'js/**/*.js', 'spec/**/*.js'], // which files to watch
+        files: ['src/less/**/*.less', 'src/js/**/*.js', 'spec/**/*.js'], // which files to watch
         tasks: ['less', 'concat', 'mocha'],
         options: {
           nospawn: true
