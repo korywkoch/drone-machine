@@ -1,8 +1,9 @@
 (function($, _, exports){
   exports.Channel = new Class({
     
-    init: function(container){
-      this.container = container || $('#DroneMachine');
+    init: function(args){
+      args = args || {};
+      this.container = args.container || $('#DroneMachine');
       this.createChannel();
     },
 

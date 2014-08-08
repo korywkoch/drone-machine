@@ -7,16 +7,20 @@
 (function($, _, exports){
   exports.DroneMachine = new Class({
     
-    init: function(containerId){
-      this.containerId = containerId || 'DroneMachine';
-      this.container = $('#' + this.containerId);
+    init: function(args){
+      args = args || {};
+      this.el = args.el || '#DroneMachine';
+      this.container = $(this.el);
+      this.manager = args.manager || new AudioManager();
       this.createChannels();
     },
 
     createChannels: function(){
       this.channels = new Array();
       this.channels.push(
-        new Channel(this.container) 
+        new Channel({
+          'container': this.container
+        }) 
       );
     },
 
